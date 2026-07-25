@@ -25,7 +25,6 @@ This UI includes:
 * Circular button with lock icon
 * Smooth shadow transitions
 * Demo: https://rafiullah-najat.github.io/Modern-password-input/
-* 
 ---
 
 ## 🛠️ Technologies Used
