@@ -1,0 +1,98 @@
+:root {
+  /* ===== Colors ===== */
+  --first-color: hsl(20, 82%, 58%);
+  --first-color-light: hsl(20, 96%, 90%);
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --body-color: hsl(220, 2%, 62%);
+  --container-color-dark: hsl(220, 4%, 34%);
+
+  /* ===== Font and Typography ===== */
+  --body-font: sans-serif;
+  --normal-font-size: 1.25rem;
+}
+
+/* Base */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+}
+
+.container {
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+  margin-inline: 1rem;
+}
+
+.input {
+  position: relative;
+  /* width: 100%; */
+  background-color: var(--body-color);
+  box-shadow:
+    inset 0 -2px 2px hsla(0, 0%, 0%, 0.5),
+    inset 0 1px 2px hsl(0, 0%, 100%);
+  padding: 1rem;
+  border-radius: 4rem;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  column-gap: 1rem;
+}
+
+.input-pass {
+  width: 100%;
+  background-color: var(--container-color-dark);
+  color: var(--first-color-light);
+  border: none;
+  outline: none;
+  padding-inline: 1rem;
+  border-radius: 4rem;
+  box-shadow:
+    inset 0 -1px 2px hsl(0, 0%, 100%),
+    inset 0 4px 6px hsl(0, 0%, 0%);
+  text-shadow: 0 0 5px var(--first-color);
+  font-size: var(--normal-font-size);
+}
+
+.input-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--body-color);
+  box-shadow:
+    -8px 12px 12px hsla(0, 0%, 0%, 0.6),
+    inset 0 1px 2px hsl(0, 0%, 100%),
+    inset 0 -1px 2px hsla(0, 0%, 0%, 0.5);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: box-shadow 0.4s;
+}
+
+.input-btn:hover {
+  box-shadow:
+    -8px 12px 12px hsla(0, 0%, 0%, 0.6),
+    inset 0 1px 4px hsla(0, 0%, 0%, 0.5),
+    inset 0 -1px 2px hsla(0, 0%, 100%, 0.5);
+}
+
+.input::after {
+  content: " ";
+  position: absolute;
+  width: 95%;
+  height: 100%;
+  background-color: var(--first-color);
+  border-radius: 4rem;
+  top: 1.25rem;
+  box-shadow: -16px 16px 4px hsl(0, 0%, 0%);
+  filter: blur(28px);
+  z-index: -1;
+}
